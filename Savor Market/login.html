@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sign in or create your Savor Market account." />
+    <meta name="theme-color" content="#f7f0e9" />
+    <title>Sign in | Savor Market</title>
+    <link rel="icon" type="image/png" href="assets/savor-market-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="auth-config.js"></script>
+    <script src="translations.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body class="account-page">
+    <main class="account-layout">
+      <section class="account-art" aria-label="Welcome to Savor Market">
+        <a class="brand account-brand" href="index.html" aria-label="Savor Market home">
+          <img class="brand-mark" src="assets/savor-market-logo.png" alt="" />
+          <span class="brand-name">Savor Market</span>
+        </a>
+        <div class="account-botanical account-botanical-one" aria-hidden="true"></div>
+        <div class="account-botanical account-botanical-two" aria-hidden="true"></div>
+        <div class="account-art-copy">
+          <p class="eyebrow">A softer kind of everyday</p>
+          <h1>Make room for feeling good.</h1>
+          <p>Thoughtful essentials, little rituals, and a calmer routine—curated for the way you want to feel.</p>
+        </div>
+        <div class="account-quote">
+          <span aria-hidden="true">“</span>
+          <p>Wellness is not a destination. It is the way we care for ourselves, one day at a time.</p>
+          <small>YOUR DAILY REMINDER</small>
+        </div>
+        <div class="account-art-foot">
+          <span>Plant-powered</span><span>Thoughtfully chosen</span><span>Made for your rituals</span>
+        </div>
+      </section>
+
+      <section class="account-panel">
+        <div class="account-panel-top">
+          <a class="account-back-link" href="products.html"><span aria-hidden="true">←</span> Back to shop</a>
+          <label class="language-control"><span class="visually-hidden">Language</span><select class="language-picker" aria-label="Language"></select></label>
+          <span class="account-top-note">Your wellness corner</span>
+        </div>
+
+        <div class="account-card">
+          <div class="account-mobile-brand">
+            <a class="brand" href="index.html" aria-label="Savor Market home">
+              <img class="brand-mark" src="assets/savor-market-logo.png" alt="" />
+              <span class="brand-name">Savor Market</span>
+            </a>
+          </div>
+          <p class="eyebrow eyebrow-dark">Welcome to Savor Market</p>
+          <h2 id="account-heading">Welcome back</h2>
+          <p class="account-intro" id="account-intro">Sign in to keep your favorite finds and everyday rituals close.</p>
+
+          <div class="account-switch" role="tablist" aria-label="Account access" data-account-switch>
+            <button class="account-tab active" id="signin-tab" type="button" role="tab" aria-selected="true" aria-controls="signin-panel" data-account-mode="signin">Sign in</button>
+            <button class="account-tab" id="signup-tab" type="button" role="tab" aria-selected="false" aria-controls="signup-panel" data-account-mode="signup">Create account</button>
+          </div>
+
+          <section class="account-session" data-account-session hidden aria-labelledby="account-session-heading">
+            <h3 id="account-session-heading">Your account</h3>
+            <p>Signed in as <strong data-account-email></strong>.</p>
+            <button class="account-submit" type="button" data-account-signout data-auth-control disabled>Sign out <span aria-hidden="true">→</span></button>
+          </section>
+
+          <form class="account-form" id="signin-panel" data-account-form="signin" role="tabpanel" aria-labelledby="signin-tab">
+            <label class="account-field">
+              <span>Email address</span>
+              <input type="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+            </label>
+            <label class="account-field">
+              <span>Password</span>
+              <span class="password-input-wrap">
+                <input type="password" name="password" placeholder="Enter your password" autocomplete="current-password" required />
+                <button class="password-toggle" type="button" aria-label="Show password" aria-pressed="false">Show</button>
+              </span>
+            </label>
+            <div class="account-form-options">
+              <span class="remember-option">Use a private device and sign out when finished.</span>
+              <button class="account-text-button" type="button" data-account-action="forgot" data-auth-control disabled>Forgot password?</button>
+            </div>
+            <button class="account-submit" type="submit" data-auth-control disabled>Sign in <span aria-hidden="true">→</span></button>
+          </form>
+
+          <form class="account-form" id="signup-panel" data-account-form="signup" role="tabpanel" aria-labelledby="signup-tab" hidden>
+            <label class="account-field">
+              <span>Your name</span>
+              <input type="text" name="name" placeholder="How should we call you?" autocomplete="name" required />
+            </label>
+            <label class="account-field">
+              <span>Email address</span>
+              <input type="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+            </label>
+            <label class="account-field">
+              <span>Create a password</span>
+              <span class="password-input-wrap">
+                <input type="password" name="password" placeholder="12+ characters, with mixed character types" autocomplete="new-password" minlength="12" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{12,}" title="Use 12 or more characters with uppercase and lowercase letters, a number, and a symbol." required />
+                <button class="password-toggle" type="button" aria-label="Show password" aria-pressed="false">Show</button>
+              </span>
+              <small class="password-guidance">Use at least 12 characters, including uppercase and lowercase letters, a number, and a symbol.</small>
+            </label>
+            <label class="remember-option terms-option"><input type="checkbox" name="terms" required /> <span>I agree to receive account-related updates and accept the store terms.</span></label>
+            <button class="account-submit" type="submit" data-auth-control disabled>Create my account <span aria-hidden="true">→</span></button>
+          </form>
+
+          <form class="account-form" id="reset-password-panel" hidden>
+            <label class="account-field">
+              <span>New password</span>
+              <span class="password-input-wrap">
+                <input type="password" name="newPassword" placeholder="12+ characters, with mixed character types" autocomplete="new-password" minlength="12" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{12,}" title="Use 12 or more characters with uppercase and lowercase letters, a number, and a symbol." required />
+                <button class="password-toggle" type="button" aria-label="Show password" aria-pressed="false">Show</button>
+              </span>
+              <small class="password-guidance">Use at least 12 characters, including uppercase and lowercase letters, a number, and a symbol.</small>
+            </label>
+            <label class="account-field">
+              <span>Confirm new password</span>
+              <span class="password-input-wrap">
+                <input type="password" name="confirmPassword" placeholder="Enter the new password again" autocomplete="new-password" minlength="12" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{12,}" title="Use 12 or more characters with uppercase and lowercase letters, a number, and a symbol." required />
+                <button class="password-toggle" type="button" aria-label="Show password" aria-pressed="false">Show</button>
+              </span>
+            </label>
+            <button class="account-submit" type="submit" data-auth-control disabled>Update password <span aria-hidden="true">→</span></button>
+          </form>
+
+          <p class="account-status" id="account-status" role="status" aria-live="polite"></p>
+          <div class="account-divider"><span>Made for your everyday</span></div>
+          <p class="account-assurance"><span aria-hidden="true">✦</span> Your account details stay yours. We never sell personal information.</p>
+        </div>
+
+        <p class="account-panel-foot">By continuing, you agree to shop thoughtfully and take good care.</p>
+      </section>
+    </main>
+  </body>
+</html>

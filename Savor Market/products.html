@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Browse all Savor Market wellness, organic ingredient, and castor oil products." />
+    <meta name="theme-color" content="#f7f0e9" />
+    <title>Shop | Savor Market</title>
+    <link rel="icon" type="image/png" href="assets/savor-market-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="auth-config.js"></script>
+    <script src="translations.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <a class="brand" href="index.html" aria-label="Savor Market home">
+            <img class="brand-mark" src="assets/savor-market-logo.png" alt="" />
+            <span class="brand-name">Savor Market</span>
+          </a>
+        </div>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="products.html" aria-current="page">Shop</a>
+          <a href="products.html?category=snacks">Snacks</a>
+          <a href="products.html?category=wellness">Wellness</a>
+          <a href="index.html#rituals">Rituals</a>
+        </nav>
+        <div class="toolbar">
+          <label class="language-control"><span class="visually-hidden">Language</span><select class="language-picker" aria-label="Language"></select></label>
+          <label class="search-box" aria-label="Search products">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <input id="product-search" type="search" placeholder="Search products..." aria-label="Search products" />
+          </label>
+          <div class="utility-links">
+            <a href="login.html" class="text-link account-entry">Sign in</a>
+            <a href="cart.html" class="cart-button" aria-label="Shopping cart">
+              <span aria-hidden="true">🛒</span>
+              <span class="cart-count" id="cart-count">0</span>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <main class="all-products-page">
+        <div class="all-products-heading">
+          <div>
+            <p class="eyebrow eyebrow-dark">The Savor Market collection</p>
+            <h1>Shop</h1>
+            <p id="product-result-count" aria-live="polite">Browse our complete collection.</p>
+          </div>
+          <label class="sort-control">Sort by
+            <select id="product-sort" aria-label="Sort products">
+              <option value="featured">Featured</option>
+              <option value="price-low">Price: low to high</option>
+              <option value="price-high">Price: high to low</option>
+              <option value="name">Name: A to Z</option>
+            </select>
+          </label>
+        </div>
+        <div class="all-products-tools">
+          <div class="catalog-actions" aria-label="Shop categories">
+            <a class="filter-btn" href="products.html?category=snacks" data-catalog-filter="snacks" data-category-name="Snacks">Snacks <span class="category-count"></span></a>
+            <a class="filter-btn" href="products.html?category=wellness" data-catalog-filter="wellness" data-category-name="Wellness">Wellness <span class="category-count"></span></a>
+            <a class="filter-btn active" href="products.html" data-catalog-filter="all">Shop</a>
+            <a class="filter-btn" href="products.html?category=castor-oil" data-catalog-filter="castor-oil" data-category-name="Castor Oil">Castor Oil <span class="category-count">(12)</span></a>
+            <a class="filter-btn" href="products.html?category=barbara-o-neill" data-catalog-filter="barbara-o-neill" data-category-name="Barbara O Neill">Barbara O Neill <span class="category-count">(3)</span></a>
+            <a class="filter-btn" href="products.html?category=ezyprotein" data-catalog-filter="ezyprotein" data-category-name="Ezyprotein">Ezyprotein <span class="category-count">(4)</span></a>
+            <a class="filter-btn" href="products.html?category=organic-ingredients" data-catalog-filter="organic-ingredients" data-category-name="Organic Ingredients">Organic Ingredients <span class="category-count">(16)</span></a>
+          </div>
+        </div>
+        <section class="product-category-results" hidden aria-label="Category products">
+          <div class="catalog-grid" id="category-products-grid"></div>
+        </section>
+        <section class="product-collection-section" id="collection-snacks" aria-labelledby="heading-snacks">
+          <div class="product-collection-heading"><div><p class="eyebrow eyebrow-dark">Food &amp; beverages</p><h2 id="heading-snacks">Snacks</h2><p>Teas, kombucha, snacks, spreads, and pantry favourites.</p></div></div>
+          <div class="catalog-grid" id="collection-grid-snacks" aria-label="Snacks products"></div>
+        </section>
+        <section class="product-collection-section" id="collection-wellness" aria-labelledby="heading-wellness">
+          <div class="product-collection-heading"><div><p class="eyebrow eyebrow-dark">Care for your everyday</p><h2 id="heading-wellness">Wellness</h2><p>Castor oils, reusable packs, essential oils, and wellness essentials.</p></div></div>
+          <div class="catalog-grid" id="collection-grid-wellness" aria-label="Wellness products"></div>
+        </section>
+        <section class="product-collection-section" id="collection-clean-nutrition" aria-labelledby="heading-clean-nutrition">
+          <div class="product-collection-heading">
+            <div>
+              <p class="eyebrow eyebrow-dark">Nourish from within</p>
+              <h2 id="heading-clean-nutrition">Clean nutrition</h2>
+              <p>Plant-based pantry staples, organic ingredients, and nourishing daily essentials.</p>
+            </div>
+          </div>
+          <div class="catalog-grid" id="collection-grid-clean-nutrition" aria-label="Clean nutrition products"></div>
+        </section>
+        <section class="product-collection-section" id="collection-skin-hair" aria-labelledby="heading-skin-hair">
+          <div class="product-collection-heading">
+            <div>
+              <p class="eyebrow eyebrow-dark">Care for your daily rituals</p>
+              <h2 id="heading-skin-hair">Skin &amp; hair ritual</h2>
+              <p>Castor oil favorites, skin care, and reusable care essentials.</p>
+            </div>
+          </div>
+          <div class="catalog-grid" id="collection-grid-skin-hair" aria-label="Skin and hair ritual products"></div>
+        </section>
+        <section class="product-collection-section" id="collection-morning-reset" aria-labelledby="heading-morning-reset">
+          <div class="product-collection-heading">
+            <div>
+              <p class="eyebrow eyebrow-dark">Start with intention</p>
+              <h2 id="heading-morning-reset">Morning reset</h2>
+              <p>Teas, herbs, and simple picks to help shape a calmer morning routine.</p>
+            </div>
+          </div>
+          <div class="catalog-grid" id="collection-grid-morning-reset" aria-label="Morning reset products"></div>
+        </section>
+      </main>
+
+      <footer class="site-footer product-page-footer">
+        <div class="footer-main">
+          <div class="footer-brand-wrap">
+            <a class="brand" href="index.html" aria-label="Savor Market home">
+              <img class="brand-mark" src="assets/savor-market-logo.png" alt="" />
+              <span class="brand-name">Savor Market</span>
+            </a>
+            <p>Your trusted source for premium castor oil, organic ingredients, and plant-based wellness products. Sourced with care, delivered with love.</p>
+          </div>
+          <div class="footer-links">
+            <div>
+              <h3>Quick links</h3>
+              <a href="products.html">Shop</a>
+              <a href="products.html?category=castor-oil">Castor Oil</a>
+              <a href="products.html?category=organic-ingredients">Organic Ingredients</a>
+              <a href="products.html?category=ezyprotein">Ezyprotein</a>
+              <a href="products.html?category=barbara-o-neill">Barbara O'Neill</a>
+              <a href="cart.html">Cart</a>
+            </div>
+          </div>
+          <div class="footer-contact">
+            <h3>Contact us</h3>
+            <a href="https://wa.me/60123456789">WhatsApp: +60 12-345 6789</a>
+            <a href="mailto:hello@savoroflife.com">Email: hello@savoroflife.com</a>
+            <p>Mon - Fri: 9AM - 6PM</p>
+            <p>Sat: 10AM - 4PM</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="payment-methods" aria-label="Accepted payment methods">
+            <span>Secure payment by</span>
+            <span class="payment-badge">Visa</span>
+            <span class="payment-badge">MC</span>
+            <span class="payment-badge">GrabPay</span>
+            <span class="payment-badge">Touch 'n Go</span>
+          </div>
+          <p class="copyright">© 2026 Savor Market. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Discover thoughtful wellness essentials at Savor Market." />
+    <meta name="theme-color" content="#f7f0e9" />
+    <title>Product | Savor Market</title>
+    <link rel="icon" type="image/png" href="assets/savor-market-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="auth-config.js"></script>
+    <script src="translations.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <a class="brand" href="index.html" aria-label="Savor Market home">
+            <img class="brand-mark" src="assets/savor-market-logo.png" alt="" />
+            <span class="brand-name">Savor Market</span>
+          </a>
+        </div>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="products.html">Shop</a>
+          <a href="products.html?category=snacks">Snacks</a>
+          <a href="products.html?category=wellness">Wellness</a>
+          <a href="index.html#rituals">Rituals</a>
+          <a href="index.html#journal">Journal</a>
+          <a href="index.html#about">About</a>
+        </nav>
+        <div class="toolbar">
+          <label class="language-control"><span class="visually-hidden">Language</span><select class="language-picker" aria-label="Language"></select></label>
+          <div class="utility-links">
+            <a href="login.html" class="text-link account-entry">Sign in</a>
+            <a href="products.html" class="text-link">Shop</a>
+            <a class="cart-button" href="cart.html" aria-label="Shopping cart">
+              <span aria-hidden="true">🛒</span>
+              <span class="cart-count" id="cart-count">0</span>
+            </a>
+          </div>
+        </div>
+      </header>
+      <main class="product-detail-page" id="product-detail" aria-live="polite"></main>
+      <footer class="site-footer product-page-footer">
+        <div class="footer-main">
+          <div class="footer-brand-wrap">
+            <a class="brand" href="index.html" aria-label="Savor Market home">
+              <img class="brand-mark" src="assets/savor-market-logo.png" alt="" />
+              <span class="brand-name">Savor Market</span>
+            </a>
+            <p>Your trusted source for premium castor oil, organic ingredients, and plant-based wellness products. Sourced with care, delivered with love.</p>
+          </div>
+          <div class="footer-links">
+            <div>
+              <h3>Quick links</h3>
+              <a href="products.html">Shop</a>
+              <a href="products.html?category=castor-oil">Castor Oil</a>
+              <a href="products.html?category=organic-ingredients">Organic Ingredients</a>
+              <a href="products.html?category=ezyprotein">Ezyprotein</a>
+              <a href="products.html?category=barbara-o-neill">Barbara O'Neill</a>
+              <a href="cart.html">Cart</a>
+            </div>
+          </div>
+          <div class="footer-contact">
+            <h3>Contact us</h3>
+            <a href="https://wa.me/60123456789">WhatsApp: +60 12-345 6789</a>
+            <a href="mailto:hello@savoroflife.com">Email: hello@savoroflife.com</a>
+            <p>Mon - Fri: 9AM - 6PM</p>
+            <p>Sat: 10AM - 4PM</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="payment-methods" aria-label="Accepted payment methods">
+            <span>Secure payment by</span>
+            <span class="payment-badge">Visa</span>
+            <span class="payment-badge">MC</span>
+            <span class="payment-badge">GrabPay</span>
+            <span class="payment-badge">Touch 'n Go</span>
+          </div>
+          <p class="copyright">© 2026 Savor Market. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

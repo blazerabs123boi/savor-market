@@ -1,0 +1,291 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Savor Market is a plant-based wellness destination for daily rituals, clean beauty, and nourishing essentials." />
+    <meta name="theme-color" content="#f7f0e9" />
+    <title>Savor Market | Premium Plant-Based Wellness</title>
+    <link rel="icon" type="image/png" href="assets/savor-market-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="auth-config.js"></script>
+    <script src="translations.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-wrap" aria-label="Savor Market home">
+          <a class="brand" href="index.html#top" aria-label="Savor Market home">
+            <img class="brand-mark" src="assets/savor-market-logo.png" alt="" />
+            <span class="brand-name">Savor Market</span>
+          </a>
+        </div>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="products.html">Shop</a>
+          <a href="products.html?category=snacks">Snacks</a>
+          <a href="products.html?category=wellness">Wellness</a>
+          <a href="#rituals">Rituals</a>
+          <a href="#journal">Journal</a>
+          <a href="#about">About</a>
+        </nav>
+
+          <label class="language-control"><span class="visually-hidden">Language</span><select class="language-picker" aria-label="Language"></select></label>
+          <label class="search-box" aria-label="Search products">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <input id="product-search" type="search" placeholder="Search products..." aria-label="Search products" />
+          </label>
+          <div class="utility-links">
+            <a href="login.html" class="text-link account-entry">Sign In</a>
+            <a class="cart-button" href="cart.html" aria-label="Shopping cart">
+              <span aria-hidden="true">🛒</span>
+              <span class="cart-count" id="cart-count">0</span>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <main id="top">
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Plant-powered wellness</p>
+            <h1>Feel good in every ritual.</h1>
+            <p class="intro">
+              Thoughtful daily essentials for nourishment, recovery, and radiant living — crafted from clean ingredients and built for real routines.
+            </p>
+
+            <div class="cta-row">
+              <a class="primary-btn" href="products.html">Shop</a>
+              <a class="secondary-btn" href="#rituals">Build a ritual</a>
+            </div>
+
+            <div class="hero-metrics" aria-label="Store metrics">
+              <div>
+                <strong>12k+</strong>
+                <span>happy customers</span>
+              </div>
+              <div>
+                <strong>4.9/5</strong>
+                <span>average rating</span>
+              </div>
+              <div>
+                <strong>1-day</strong>
+                <span>dispatch window</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="Featured wellness assortment">
+            <div class="glow-orb glow-one"></div>
+            <div class="glow-orb glow-two"></div>
+
+            <div class="display-card feature-card card-one">
+              <span class="card-label">Wellness edit</span>
+              <h2>Organic support for better days.</h2>
+              <div class="mini-product">
+                <div class="mini-bottle"></div>
+                <div>
+                  <strong>Golden Castor Oil</strong>
+                  <span>Restorative care</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="display-card product-card card-two">
+              <div class="product-image product-image--amber">
+                <img src="assets/savor-market/pdf-image-011.jpg" alt="Organic Golden Castor Oil roll-on with rose quartz" />
+              </div>
+              <div class="card-meta">
+                <p>Best seller</p>
+                <h3>Castor Oil Roll-on</h3>
+                <span>RM 199.00</span>
+              </div>
+            </div>
+
+            <div class="floating-badge">
+              <span>Flash sale</span>
+              <strong>60% OFF</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="promo-strip" aria-label="Store benefits">
+          <div>
+            <span class="promo-icon">✦</span>
+            <p>Free shipping over RM 200</p>
+          </div>
+          <div>
+            <span class="promo-icon">✓</span>
+            <p>Vegan & cruelty-free</p>
+          </div>
+          <div>
+            <span class="promo-icon">✧</span>
+            <p>Traceable ingredients</p>
+          </div>
+        </section>
+
+        <section class="collections" id="shop">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow eyebrow-dark">Shop by purpose</p>
+              <h2>Daily essentials, beautifully curated.</h2>
+            </div>
+            <a href="products.html" class="text-link text-link--strong">Shop</a>
+          </div>
+
+          <div class="collection-grid shop-section-grid">
+            <article class="collection-card collection-card--sand"><p class="mini-tag">Food &amp; beverages</p><h3>Snacks</h3><p>Teas, kombucha, snacks, spreads, and pantry favourites.</p><a href="products.html?category=snacks" aria-label="Shop Snacks">Shop Snacks</a></article>
+            <article class="collection-card collection-card--green"><p class="mini-tag">Care for your everyday</p><h3>Wellness</h3><p>Castor oils, reusable packs, essential oils, and wellness essentials.</p><a href="products.html?category=wellness" aria-label="Shop Wellness">Shop Wellness</a></article>
+          </div>
+          <div class="collection-grid">
+            <article class="collection-card collection-card--green">
+              <div class="card-sketch card-sketch--leaf"></div>
+              <p class="mini-tag">Gut health</p>
+              <h3>Clean nutrition</h3>
+              <a href="products.html#collection-clean-nutrition" aria-label="Shop clean nutrition">Shop now</a>
+            </article>
+
+            <article class="collection-card collection-card--rose">
+              <div class="card-sketch card-sketch--botanical"></div>
+              <p class="mini-tag">Beauty care</p>
+              <h3>Skin & hair rituals</h3>
+              <a href="products.html#collection-skin-hair" aria-label="Shop skin and hair rituals">Shop now</a>
+            </article>
+
+            <article class="collection-card collection-card--sand">
+              <div class="card-sketch card-sketch--drop"></div>
+              <p class="mini-tag">Daily rituals</p>
+              <h3>Morning reset</h3>
+              <a href="products.html#collection-morning-reset" aria-label="Shop morning reset products">Shop now</a>
+            </article>
+          </div>
+        </section>
+
+        <section class="catalog" id="wellness">
+          <div class="section-header section-header--compact">
+            <div>
+              <p class="eyebrow eyebrow-dark">Featured favorites</p>
+              <h2>Best sellers that keep coming back.</h2>
+            </div>
+            <div class="catalog-actions" aria-label="Product filters">
+              <button class="filter-btn active" type="button" data-filter="all">All</button>
+              <button class="filter-btn" type="button" data-filter="nutrition">Nutrition</button>
+              <button class="filter-btn" type="button" data-filter="beauty">Beauty</button>
+              <button class="filter-btn" type="button" data-filter="wellness">Wellness</button>
+            </div>
+          </div>
+
+          <div class="catalog-grid" id="product-grid" aria-live="polite"></div>
+        </section>
+
+        <section class="story-block" id="rituals">
+          <div class="story-visual">
+            <div class="story-image-wrap">
+              <img src="assets/savor-market/pdf-image-014.jpg" alt="Queen of the Thrones liver castor oil pack" />
+            </div>
+          </div>
+
+          <div class="story-copy">
+            <p class="eyebrow eyebrow-dark">The ritual</p>
+            <h2>Designed for calmer routines and better habits.</h2>
+            <p>
+              From grounding morning supplements to gentle nourishment for skin and hair, every product is chosen for quality, simplicity, and better everyday energy.
+            </p>
+            <ul class="benefits-list">
+              <li>Clean ingredient lists with transparent sourcing.</li>
+              <li>Multi-use favorites that fit a busy wellness routine.</li>
+              <li>Thoughtful formulas designed for long-term balance.</li>
+            </ul>
+            <a class="primary-btn" href="#newsletter">Get wellness picks</a>
+          </div>
+        </section>
+
+        <section class="testimonial-strip" id="journal">
+          <div class="testimonial-card">
+            <p class="quote-mark">“</p>
+            <p class="testimonial-copy">
+              The quality feels elevated and the ingredients are genuinely clean. My routine feels simpler and more intentional since switching over.
+            </p>
+            <div class="testimonial-meta">
+              <strong>Amira Y.</strong>
+              <span>Wellness customer</span>
+            </div>
+          </div>
+          <div class="mini-stats">
+            <div>
+              <strong>96%</strong>
+              <span>repeat customers</span>
+            </div>
+            <div>
+              <strong>4.9★</strong>
+              <span>average review</span>
+            </div>
+            <div>
+              <strong>30K+</strong>
+              <span>items shipped</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="newsletter" id="newsletter">
+          <div>
+            <p class="eyebrow eyebrow-dark">Fresh arrivals</p>
+            <h2>Stay in the loop with new drops and wellness notes.</h2>
+          </div>
+          <form class="newsletter-form" aria-label="Newsletter signup">
+            <label class="visually-hidden" for="newsletter-email">Email address</label>
+            <input id="newsletter-email" type="email" placeholder="Your email address" aria-label="Your email address" />
+            <button type="submit">Join now</button>
+          </form>
+        </section>
+      </main>
+
+      <footer class="site-footer" id="about">
+        <div class="footer-main">
+          <div class="footer-brand-wrap">
+            <a class="brand" href="#top" aria-label="Savor Market home">
+              <img class="brand-mark" src="assets/savor-market-logo.png" alt="" />
+              <span class="brand-name">Savor Market</span>
+            </a>
+            <p>Your trusted source for premium castor oil, organic ingredients, and plant-based wellness products. Sourced with care, delivered with love.</p>
+          </div>
+
+          <div class="footer-links">
+            <div>
+              <h3>Quick links</h3>
+              <a href="products.html">Shop</a>
+              <a href="products.html?category=castor-oil">Castor Oil</a>
+              <a href="products.html?category=organic-ingredients">Organic Ingredients</a>
+              <a href="products.html?category=ezyprotein">Ezyprotein</a>
+              <a href="products.html?category=barbara-o-neill">Barbara O'Neill</a>
+              <a href="cart.html">Cart</a>
+            </div>
+          </div>
+
+          <div class="footer-contact">
+            <h3>Contact us</h3>
+            <a href="https://wa.me/60123456789">WhatsApp: +60 12-345 6789</a>
+            <a href="mailto:hello@savoroflife.com">Email: hello@savoroflife.com</a>
+            <p>Mon - Fri: 9AM - 6PM</p>
+            <p>Sat: 10AM - 4PM</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="payment-methods" aria-label="Accepted payment methods">
+            <span>Secure payment by</span>
+            <span class="payment-badge">Visa</span>
+            <span class="payment-badge">MC</span>
+            <span class="payment-badge">GrabPay</span>
+            <span class="payment-badge">Touch 'n Go</span>
+          </div>
+          <p class="copyright">© 2026 Savor Market. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
